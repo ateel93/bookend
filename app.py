@@ -28,7 +28,7 @@ def home():
 @app.route('/books')
 def all_books(): 
     books = Book.query.all()
-    return [b.to_dict(rules=['-users']) for b in books], 200
+    return [b.to_dict() for b in books], 200
 
 @app.route('/users/<int:id>')
 def user_by_id(id):
