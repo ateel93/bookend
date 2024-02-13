@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from models import db, Book, User, Club, Read, ToRead
+from models import db, Book, User, BookUser
 from flask_restful import Api, Resource
 from flask_migrate import Migrate
 from flask import Flask, make_response, jsonify, request
@@ -23,11 +23,12 @@ db.init_app(app)
 
 @app.route('/')
 def home():
-    return ''
+    return 'u are home!'
 
 @app.route('/books')
 def all_books(): 
     books = Book.query.all()
+    # return "test get"
     return [b.to_dict() for b in books], 200
 
 @app.route('/users/<int:id>')
@@ -39,11 +40,6 @@ def user_by_id(id):
     if request.method == 'GET':
         return user.to_dict(), 200
     
-
-@app.route('/books', methods=['GET'])
-def all_books(): 
-    books = Book.query.all()
-    return [b.to_dict for b in books], 200
 
 
 # @app.route('/signups', methods = ['POST'])
