@@ -7,6 +7,7 @@ import Home from './components/routes/Home';
 import User from './components/routes/User';
 import BooksList from './components/routes/BooksList';
 import LoginSignup from './components/routes/LoginSignUp';
+import Recommendation from './components/routes/Recommendation';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
       path: "/user",
       element: <User /> 
+    },
+    {
+      path: "/recommendation",
+      element: <Recommendation />
     }
   ]);
 

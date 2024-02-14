@@ -10,11 +10,14 @@
   font-family: 'Cormorant Garamond', serif;
   box-sizing:border-box;
   width:60%;
+  
+  
 }
 
 
 .flex-container {
     display: flex;
+    margin: -10px 120px
   }
   
   .flex-child {

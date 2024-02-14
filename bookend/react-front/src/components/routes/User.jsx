@@ -2,16 +2,26 @@ import React from 'react'
 import Bookclub from '../features/Bookclub';
 import NavBar from '../../NavBar';
 import './User.css';
+import './Navbar.css';  
 
 function User() {
     return (
         <div>
-            <header>
-                <img src="/images/bookend.jpg" alt="bookendlogo"/>
-                <NavBar />
-            </header> 
-            <hr></hr> 
+          <div>
+            <div className="nav-flex-container">
+                <div className="nav-flex-child">
+                    <div className="img">
+                        <img class="img" src="/images/bookend.jpg" alt="bookendlogo"/>
+                    </div>
+                </div>
+                    <div className="nav-flex-child">
+                        <div className="nav"><NavBar /></div>
+                    </div>
+                </div>
+            <hr></hr>  
+        </div> 
             <div className="user">
+                
                 <div className="user">
                     <h3>About the worm</h3>
                     <h3>favorite genre</h3>

@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom'
+import './index.css';
+
 
 
 function NavBar() {
@@ -24,6 +26,12 @@ function NavBar() {
                     className="nav-link"
                 >
                 Signup
+                </NavLink>
+                <NavLink
+                    to="/recommendation"
+                    className="nav-link"
+                >
+                Recommend
                 </NavLink>
                 <NavLink
                     to="/user"

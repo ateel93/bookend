@@ -3,17 +3,27 @@ import Login from "../features/Login";
 import SignUp from '../features/Signup';
 import NavBar from '../../NavBar';
 import './Home.css';
+import './Navbar.css'; 
+
 
 function Home() {
     const [account, NoAccount] = useState(true)
 
     return (
         <div>
-            <header>
-                <img src="/images/bookend.jpg" alt="bookendlogo"/>
-                <NavBar />
-            </header> 
-            <hr></hr>
+             <div>
+            <div className="nav-flex-container">
+                <div className="nav-flex-child">
+                    <div className="img">
+                        <img class="img" src="/images/bookend.jpg" alt="bookendlogo"/>
+                    </div>
+                </div>
+                    <div className="nav-flex-child">
+                        <div className="nav"><NavBar /></div>
+                    </div>
+                </div>
+            <hr></hr>  
+        </div>
             <div className="home">
                 <div>
                     <h3>
@@ -31,7 +41,7 @@ function Home() {
                     </h3>
                 </div>
                 </div>
-                <div className="homelogindiv">
+                {/* <div className="homelogindiv">
                     <button onClick={() => NoAccount(prev => !prev)}>Login / Sign Up</button>        
                     { 
                         account ? 
@@ -39,7 +49,7 @@ function Home() {
                                 :
                             <SignUp />
                     }
-                </div>
+                </div> */}
         </div>
     
     );

@@ -86,9 +86,14 @@ header {
   font-family: 'Cormorant Garamond', serif;
   font-size: min(10vw, 15px) ;
   color: black;
+   /* font-weight: bold; */
 }
 
+body {
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+
 /* End of Navbar CSS */
-
-
-

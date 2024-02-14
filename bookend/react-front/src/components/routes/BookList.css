@@ -1,0 +1,83 @@
+.bookcard {
+    /* border: 1px solid black;
+    box-shadow: 0 0 7px 0 #ddd; */
+    border-radius: 4px;
+    /* background-color: white; */
+    align-items: center;
+    text-align: center;
+    padding:1rem;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+
+  .bookcard img {
+    width:6em;
+    height:6em;
+    position: relative;
+    display: flex;
+  }
+
+  .bookfront {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .container {
+    width:50%;
+    display:flex;
+  }
+
+  .search {
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .search-container {
+    display: flex;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size:1em;
+    width:70%;
+    border-radius: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-container input {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size:1em;
+    width:100%;
+}
+
+.search-bar-div {
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .search-bar {
+    width: 150px; Adjust the width as needed
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  } */
+
+
+
+
+  /* #existing-recipes {
+    width:100%;
+    height:auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .10rem;
+    
+  } */
