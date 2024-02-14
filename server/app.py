@@ -40,20 +40,20 @@ def user_by_id(id):
     if request.method == 'GET':
         return user.to_dict(), 200
     
+    
 
-
-# @app.route('/signups', methods = ['POST'])
-# def all_signups():
+# @app.route('/bookusers', methods = ['POST'])
+# def all_bookusers():
 #     json_data = request.get_json()
 
-#     new_signup = Signup(
+#     new_bookuser = bookuser(
 #         time = json_data.get('time'),
 #         camper_id = json_data.get('camper_id'),
 #         activity_id = json_data.get('activity_id')
 #     )
 
-#     db.session.add(new_signup)
+#     db.session.add(new_bookuser)
 #     db.session.commit()
 
-#     return new_signup.to_dict(), 201
+#     return new_bookuser.to_dict(), 201
 

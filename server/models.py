@@ -45,8 +45,8 @@ class User(db.Model, SerializerMixin):
     #how to get which books are in the "reads" table 4 this user
     bookusers = db.relationship('BookUser', back_populates='user')
     
-    # # Add serialization rules
-    # serialize_rules = ['-signups.camper']
+    # Add serialization rules
+    serialize_rules = ['-bookusers.user']
     
     def __repr__(self):
         return f'<User {self.id}: {self.name}>'
@@ -87,7 +87,7 @@ class BookUser(db.Model, SerializerMixin):
 #     book = db.relationship('Book', back_populates = 'books')
     
     # # Add serialization rules
-    # serialize_rules = ['-campers.signup', '-activity.signups']
+    # serialize_rules = ['-users.bookuser', '-activity.bookusers']
     
     # def __repr__(self):
     #     return f'<Club {self.id}>'
