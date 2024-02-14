@@ -3,7 +3,10 @@ import React from 'react';
 
 function featuredBook() {
     return (
-        <h3>Book of the week</h3>
+        <div className='bow'>
+             <h4>Book of the week</h4>
+        </div>
+       
     )
 }
 

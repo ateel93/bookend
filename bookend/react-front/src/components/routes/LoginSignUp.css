@@ -1,0 +1,30 @@
+.login {
+  justify-content: center;
+  margin-top: 1em;
+  gap:.25em;
+  display: inline;
+  box-sizing:border-box;
+  border-radius: 2em;
+  font-size: 1em;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  box-sizing:border-box;
+  width:60%;
+}
+
+
+.flex-container {
+    display: flex;
+  }
+  
+  .flex-child {
+    flex: 1;
+  }
+  
+  /* .login, .signup {
+    Add any additional styling you need 
+  }
+  
+  .signupright {
+    Add any additional styling you need
+  } */

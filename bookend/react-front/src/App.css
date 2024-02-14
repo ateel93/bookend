@@ -37,22 +37,58 @@
   }
 }
 
-
-.darkMode {
-  background-color: black;
+html, body {
+  margin:0;
+  padding:0;
+  height:100vh;
+  background-color: #ADD8E6;
+  color: black;
+  font-family: 'Cormorant Garamond', serif;
+  width:100%;
+  
 }
 
-#darkMode {
-  position: absolute;
-  border: 2px solid black;
-  background-color: white;
-  font-weight: bold;
-  margin: 3px;
-  height: 52px;
-  width: 130;
-  cursor: pointer;
+header {
+  padding: 2rem 2rem 2rem 2rem; 
+  height:20%;
+  position: relative;
+  left: -XXpx;
 }
 
-#darkMode:hover{
-  opacity: .5;
+.header {
+  text-align: center;
+
 }
+
+/* NavBar CSS  */
+.navbar {
+  width:100%;
+}
+
+.nav-div {
+  height: 0px;
+  min-width: 700px;
+  width: 100%;
+  margin-top: 10px;
+  display: inline;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav-link{
+  box-sizing: border-box;
+  width: 60px;
+  padding: 5px;
+  margin: 0 6px 6px;
+  background: 00bfb2;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: min(10vw, 15px) ;
+  color: black;
+}
+
+/* End of Navbar CSS */
+
+
+

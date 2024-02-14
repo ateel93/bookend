@@ -1,0 +1,14 @@
+.darkMode {
+    background-color: darkgray;
+  }
+  
+  #darkMode {
+    position: absolute;
+    border: 2px solid black;
+    background-color: white;
+    font-weight: bold;
+    margin: 3px;
+    height: 52px;
+    width: 130;
+    cursor: pointer;
+  }

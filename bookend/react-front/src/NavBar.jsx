@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 function NavBar() {
     return (
-        <div>
-                    <img src="react-front/images/bookend.jpg" alt="bookendlogo"/>
+    <div>
         <nav className="navbar">
             <div className="nav-div">
                 <NavLink
@@ -21,6 +20,12 @@ function NavBar() {
                 Books
                 </NavLink>
                 <NavLink
+                    to="/signup"
+                    className="nav-link"
+                >
+                Signup
+                </NavLink>
+                <NavLink
                     to="/user"
                     className="nav-link"
                 >
@@ -29,10 +34,9 @@ function NavBar() {
       
             </div>
         </nav>
-        <button  id="darkMode" onClick={ (e) => {document.querySelector('body').classList.toggle('darkMode')}}>Reading Mode</button>
     </div>
         
     )
 }
 
-export default NavBar
+export default NavBar;
