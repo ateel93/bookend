@@ -7,14 +7,47 @@ from models import db, Book, BookUser, User, Club, ClubUser
 
 fake = Faker()
 
+books_list = [
+    {"title": "To Kill a Mockingbird", "author": "Harper Lee", "genre": "Classic"},
+    {"title": "1984", "author": "George Orwell", "genre": "Dystopian"},
+    {"title": "Pride and Prejudice", "author": "Jane Austen", "genre": "Romance"},
+    {"title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "genre": "Roaring Twenties"},
+    {"title": "The Catcher in the Rye", "author": "J.D. Salinger", "genre": "Coming-of-age"},
+    {"title": "Harry Potter and the Philosopher's Stone", "author": "J.K. Rowling", "genre": "Fantasy"},
+    {"title": "To the Lighthouse", "author": "Virginia Woolf", "genre": "Modernist"},
+    {"title": "The Hobbit", "author": "J.R.R. Tolkien", "genre": "Adventure"},
+    {"title": "The Da Vinci Code", "author": "Dan Brown", "genre": "Mystery"},
+    {"title": "The Road", "author": "Cormac McCarthy", "genre": "Post-Apocalyptic"},
+    {"title": "The Lord of the Rings", "author": "J.R.R. Tolkien", "genre": "Epic"},
+    {"title": "The Hunger Games", "author": "Suzanne Collins", "genre": "Dystopian"},
+    {"title": "Brave New World", "author": "Aldous Huxley", "genre": "Utopian"},
+    {"title": "Frankenstein", "author": "Mary Shelley", "genre": "Gothic"},
+    {"title": "Gone with the Wind", "author": "Margaret Mitchell", "genre": "Historical"},
+    {"title": "The Picture of Dorian Gray", "author": "Oscar Wilde", "genre": "Decadent"},
+    {"title": "The Hitchhiker's Guide to the Galaxy", "author": "Douglas Adams", "genre": "Comedy"},
+    {"title": "Moby-Dick", "author": "Herman Melville", "genre": "Whaling"},
+    {"title": "The Alchemist", "author": "Paulo Coelho", "genre": "Allegorical"},
+    {"title": "Jane Eyre", "author": "Charlotte Brontë", "genre": "Gothic Romance"},
+    {"title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe", "author": "C.S. Lewis", "genre": "Fantasy"},
+    {"title": "Crime and Punishment", "author": "Fyodor Dostoevsky", "genre": "Psychological"},
+    {"title": "The Kite Runner", "author": "Khaled Hosseini", "genre": "Historical Fiction"},
+    {"title": "One Hundred Years of Solitude", "author": "Gabriel García Márquez", "genre": "Magical Realism"},
+    {"title": "The Bell Jar", "author": "Sylvia Plath", "genre": "Semi-Autobiographical"},
+    {"title": "The Color Purple", "author": "Alice Walker", "genre": "Epistolary"},
+    {"title": "Wuthering Heights", "author": "Emily Brontë", "genre": "Gothic Romance"},
+    {"title": "The Road Less Traveled", "author": "M. Scott Peck", "genre": "Self-help"},
+    {"title": "The Stand", "author": "Stephen King", "genre": "Horror"},
+    {"title": "The Secret Garden", "author": "Frances Hodgson Burnett", "genre": "Children's Literature"}
+]
+
 
 def create_books():
     books = []
-    for _ in range(10):
+    for book_info in books_list:
         b = Book(
-            title=fake.sentence(),
-            author=fake.name(),
-            genre=fake.word(),
+            title=book_info["title"],
+            author=book_info["author"],
+            genre=book_info["genre"]
         )
         books.append(b)
 

@@ -57,15 +57,18 @@ def user_by_id(id):
         return user.to_dict(), 200
 
 #get the books that each user has in their to-read/read.. query the BookUser given the user_id
-# @app.route('/books/<int:user_id>')
-# def books_by_user(user_id):
-#     if user_id is None: 
-#         return {'error':'user not found :(' }, 404
+@app.route('/books/<int:user_id>')
+def books_by_user(user_id):
+    if user_id is None: 
+        return {'error':'user not found :(' }, 404
     
-#     books = BookUser.query.filter(BookUser.user_id == user_id)
-#     return [b.to_dict(rules=['-user']) for b in books], 200
+    books = BookUser.query.filter(BookUser.user_id == user_id)
+    return [b.to_dict(rules=['-user']) for b in books], 200
 
-# #should this be by book id?
+# #should this be by book id, or user.id
+#show a list of books, click on the associated "remove" in order to REMOVE IT
+#same with a list of books, once finished ... "read" option
+#how to get it so that once 5 users have this book in this list, then a club will be made??
 # @app.route('/books/<int:id>', methods=['DELETE'])
 # def book_by_id(id): 
 #     book = Book.query.filter(Book.id == id).first()
