@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from models import db, Book, User, BookUser
+from models import db, Book, User, BookUser, ClubUser, Club
 from flask_restful import Api, Resource
 from flask_migrate import Migrate
 from flask import Flask, make_response, jsonify, request
@@ -28,7 +28,6 @@ def home():
 @app.route('/books')
 def all_books(): 
     books = Book.query.all()
-    # return "test get"
     return [b.to_dict() for b in books], 200
 
 @app.route('/users/<int:id>')
@@ -39,8 +38,29 @@ def user_by_id(id):
         return {'error':'user not found :(' }, 404
     if request.method == 'GET':
         return user.to_dict(), 200
+
+#get the books that each user is reading... query the BookUser given the user_id
+@app.route('/books/<int:user_id>')
+def books_by_user(user_id):
+    if user_id is None: 
+        return {'error':'user not found :(' }, 404
     
+    books = BookUser.query.filter(BookUser.user_id == user_id)
+    return [b.to_dict(rules=['-user']) for b in books], 200
     
+
+@app.route('/clubs/<int:user_id>')
+#would still query the clubuser, but interested in the clubs ... 
+def clubs_by_user(user_id):
+    if user_id is None: 
+        return {'error':'user not found :(' }, 404
+    
+    clubs = ClubUser.query.filter(ClubUser.user_id == user_id)
+    return [c.to_dict(rules=()) for c in clubs], 200
+    
+
+    #get the clubs the user is in on the clubuser ... 
+    #clubuser/user-id: given a user ID, return all the clubs you user is in 
 
 # @app.route('/bookusers', methods = ['POST'])
 # def all_bookusers():
@@ -56,4 +76,3 @@ def user_by_id(id):
 #     db.session.commit()
 
 #     return new_bookuser.to_dict(), 201
-
