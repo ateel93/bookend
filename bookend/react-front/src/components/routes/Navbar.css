@@ -1,0 +1,16 @@
+
+  
+.nav-flex-container {
+      display: inline;
+    }
+    
+.nav-flex-child {
+      flex: 1;
+      align-items: center;
+    }
+
+.img {
+    padding-left: 8px;
+    padding-top: 5px;
+    background-color: #e6c39c;
+}

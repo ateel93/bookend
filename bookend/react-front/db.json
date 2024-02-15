@@ -1,0 +1,25 @@
+{
+"books": [
+    {
+      "id": 1,
+      "image": "https://iambaker.net/wp-content/uploads/2021/10/pumpkin-pie-2.jpg",
+      "name": "BFG",
+      "author": "xyz",
+      "description": "blah blah blah blah"
+    },
+    {
+        "id": 1,
+        "image": "https://iambaker.net/wp-content/uploads/2021/10/pumpkin-pie-2.jpg",
+        "name": "BFG",
+        "author": "xyz",
+        "description": "blah blah blah blah"
+    },
+    {
+        "id": 1,
+        "image": "https://iambaker.net/wp-content/uploads/2021/10/pumpkin-pie-2.jpg",
+        "name": "BFG",
+        "author": "xyz",
+        "description": "blah blah blah blah"
+    }
+]
+}

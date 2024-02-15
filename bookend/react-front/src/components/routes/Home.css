@@ -1,0 +1,155 @@
+.home {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: auto;
+    padding-bottom: auto;
+    display: inline-block;
+    background-color: #e6c39c;
+    outline: thick double #4a4643;
+}
+
+.homelogindiv {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: auto;
+    padding-bottom: auto;
+    display: inline;
+}
+
+.loginform {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.signupform {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.login {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: auto;
+    padding-bottom: auto;
+    /* display: block; */
+}
+
+label, input {
+    display: block;
+}
+
+
+form {
+  /* display:flex; */
+  justify-content: center;
+  margin-top: 1em;
+  gap:.25em;
+  display: flex;
+  box-sizing:border-box;
+  border-radius: 2em;
+}
+
+form input {
+  font-size: 1em;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  box-sizing:border-box;
+  width:30%;
+}
+
+.newform {
+  text-align: center;
+  justify-content: center;
+  display:block;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.login {
+  display:flex;
+  justify-content: center;
+  margin-top: 1em;
+  gap:.25em;
+  display: flex;
+  box-sizing:border-box;
+  border-radius: 2em;
+  flex-wrap: wrap;
+}
+
+.login {
+  font-size: 1em;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  box-sizing:border-box;
+  width:60%;
+}
+
+.login {
+  text-align: center;
+  justify-content: center;
+  display:block;
+
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homelogindiv {
+  justify-content: right;
+}
+
+.logo {
+  justify-content: right;
+}
+
+form {
+    display:flex;
+    justify-content: center;
+    margin-top: 1em;
+    gap:.25em;
+    display: inline-flex;
+    box-sizing:border-box;
+    border-radius: 2em;
+  }
+
+  form input {
+    font-size: 1em;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    box-sizing:border-box;
+    width:30%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login {
+    text-align: center;
+    justify-content: center;
+    display:block;
+  }
+
+  
+
+
+
+
+
+
+
