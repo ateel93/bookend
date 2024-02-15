@@ -27,12 +27,12 @@ function Home() {
             <div className="home">
                 <div>
                     <h3>
-                        Join a club
+                        We have X amount of users and have hosted X amount of clubs.
                     </h3>
                 </div>
                 <div>
                     <h3>
-                        Deciding what to read?
+                        Unsure what to read?
                     </h3>
                 </div>
                 <div>

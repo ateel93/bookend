@@ -10,10 +10,18 @@
   font-family: 'Cormorant Garamond', serif;
   box-sizing:border-box;
   width:60%;
-  
-  
 }
 
+.signupform {
+    margin-bottom: 5px;
+    margin-top: 1em;
+    gap:.25em;
+    
+}
+
+input {
+    width: 100%;
+}
 
 .flex-container {
     display: flex;
@@ -22,6 +30,12 @@
   
   .flex-child {
     flex: 1;
+  }
+
+  .wrapper {
+    background-color: #e6c39c;
+    outline: thick double #4a4643;
+    width:60%;
   }
   
   /* .login, .signup {

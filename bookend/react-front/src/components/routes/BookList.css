@@ -2,7 +2,7 @@
     /* border: 1px solid black;
     box-shadow: 0 0 7px 0 #ddd; */
     border-radius: 4px;
-    /* background-color: white; */
+    background-color: #e6c39c;
     align-items: center;
     text-align: center;
     padding:1rem;
@@ -30,6 +30,7 @@
   .search {
     margin: 0 auto;
     display: inline-block;
+    
   }
 
   .search-container {
@@ -55,9 +56,22 @@
 .search-bar-div {
     justify-content: center;
     display: flex;
-    justify-content: center;
     align-items: center;
+    
 }
+
+.search-wrapper {
+    justify-content: center;
+    background-color: #e6c39c;
+    padding-top: 10px
+}
+
+.books-wrapper {
+    outline: thick double #4a4643;
+    width:50%;
+}
+
+
 /* .search-bar {
     width: 150px; Adjust the width as needed
     padding: 10px;

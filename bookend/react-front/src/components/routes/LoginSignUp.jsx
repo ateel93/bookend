@@ -22,13 +22,15 @@ function LoginSignup() {
                 </div>
             <hr></hr>  
         </div>
-            <div className="flex-container">
-                <div className="flex-child">
-                    <div className="login"><Login /></div>
-                </div>
-                <div className="flex-child">
-                    <div className="signupright">
-                        <div className="signup"><SignUp /></div>
+            <div className="wrapper">
+                <div className="flex-container">
+                    <div className="flex-child">
+                        <div className="login"><Login /></div>
+                    </div>
+                    <div className="flex-child">
+                        <div className="signupright">
+                            <div className="signup"><SignUp /></div>
+                        </div>
                     </div>
                 </div>
             </div>

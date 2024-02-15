@@ -20,14 +20,14 @@ function User() {
                 </div>
             <hr></hr>  
         </div> 
-            <div className="user">
+            <div className="user-div">
                 
                 <div className="user">
                     <h3>About the worm</h3>
-                    <h3>favorite genre</h3>
                     <h3>My Clubs</h3>
                     <Bookclub />
                     <h3>Books on my list</h3>
+                    <h3>Books i've read</h3>
                 </div>
             </div>
             <div>
