@@ -13,6 +13,10 @@ function User() {
 
     const [userRead, setUserRead] = useState([])
 
+    const [read, setRead] = useState(true)
+
+    const [deleted, setDeleted] = useState(true)
+
     useEffect(() => {
         fetch('http://127.0.0.1:5000/users/${user.id}')
         .then(resp => resp.json())
@@ -57,17 +61,19 @@ function User() {
             <div className="user-div">
                 
                 <div className="user">
-                    <h3>About the worm</h3>
+                    <h4>About the worm</h4>
                     
-                    <h3>My Clubs</h3>
-                    <Bookclub />
-                    <h3>Books on my list</h3>
-                    <h3>Books i've read</h3>
+                    <h4>My Clubs</h4>
+                    <h4>Books on my list</h4>
+                <button type="click" onClick={() => setRead(prev => !prev)}>{read ? "Read" : "Return"} </button> 
+                    <h4>Books i've read</h4>
+                <button type="click" onClick={() => setDeleted(prev => !prev)}>{deleted ? "Delete Book" : "Book Deleted"} </button> 
+
                 </div>
             </div>
-            <div>
+            {/* <div>
                 <button  id="darkMode" onClick={ (e) => {document.querySelector('body').classList.toggle('darkMode')}}>Reading Mode</button>
-            </div>
+            </div> */}
         </div>
     
     );

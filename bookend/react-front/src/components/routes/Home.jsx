@@ -4,6 +4,8 @@ import SignUp from '../features/Signup';
 import NavBar from '../../NavBar';
 import './Home.css';
 import './Navbar.css'; 
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -52,20 +54,20 @@ function Home() {
         </div>
             <div className="home">
                 <div>
-                    <h3>
+                    <h2>
                         We have {allUsers.length} users and have hosted {allClubs.length} book-clubs.
-                    </h3>
+                    </h2>
                 </div>
                 <div>
-                    <h3>
-                        Unsure what to read?
-                    </h3>
+                    <h2 >
+                        Unsure what to read? Check out our <Link to="/books">Books</Link> page
+                    </h2>
                 </div>
-                <div>
+                {/* <div>
                     <h3>
                         Featured Books
                     </h3>
-                </div>
+                </div> */}
                 </div>
                 {/* <div className="homelogindiv">
                     <button onClick={() => NoAccount(prev => !prev)}>Login / Sign Up</button>        

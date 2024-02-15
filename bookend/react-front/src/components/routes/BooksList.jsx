@@ -9,10 +9,13 @@ import BookMap from "./BookMap"
 
 
 
+
+
 function BooksList({book}) {
 
     const [flip, setFlip] = useState(true)
     const [read, readReturn] = useState(true)
+    const [searchTerm, setSearchTerm] = useState('')
 
 
     const [books, setBooks] = useState([])
@@ -21,10 +24,22 @@ function BooksList({book}) {
     useEffect(() => {
     fetch('http://127.0.0.1:5000/books')
     .then(resp => resp.json())
-    .then(data =>setBooks(data))
+    .then(data =>setBooks(data.books))
     }, []);
     
-    console.log(books.books)
+    // console.log(books.books)
+
+    const newSearch = books.filter(book => {
+        return book.title.toLowerCase().includes(searchTerm.toLowerCase())
+        ||
+        book.author.toLowerCase().includes(searchTerm.toLowerCase())
+        ||
+        book.genre.toLowerCase().includes(searchTerm.toLowerCase())
+    })
+
+
+
+console.log(newSearch)
 
 
 
@@ -52,27 +67,20 @@ function BooksList({book}) {
                         <div className="search-container">
                             <input type="text" className="search-bar"
                                 placeholder="Search books by title or author..." 
-                                // value and on change needed
+                                value={searchTerm}
+                                onChange={(event) => setSearchTerm(event.target.value)}
                             />
                     </div>
                 </div>
                 </div>
-                    <div>
-                        <div className="bookcard" onClick={() => setFlip(prev => !prev)}>
-                        {
-                            flip ?
-                            <div className="bookfront">
-                                {books.books.map(book => (
-                                <h3>{book.title},
-                                {book.author},
-                                {book.genre}</h3>))}
+                    <div className='bookcard-container'>
+                        <div className="bookcard" >
+                            <div className="card-content">
+                                {newSearch.map(book => (<h3 className='helement'>{book.title},<br /> {book.author},<br /> {book.genre}</h3>))}
+                                <button type="click" onClick={() => readReturn(prev => !prev)}>{read ? "Read" : "Return"} </button>    
                             </div>
-                            :
-                            <div className="bookback">
-                                <h3>Description Here</h3>
-                            </div>
-                        }  
-                        <button type="click" onClick={() => readReturn(prev => !prev)}>{read ? "Read" : "Return"} </button>                
+                         
+                                   
                     </div>
                 </div>
             </div>
