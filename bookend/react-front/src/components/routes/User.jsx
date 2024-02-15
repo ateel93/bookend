@@ -3,8 +3,42 @@ import Bookclub from '../features/Bookclub';
 import NavBar from '../../NavBar';
 import './User.css';
 import './Navbar.css';  
+import {useState, useEffect} from 'react';
 
 function User() {
+
+    const [userId, setUserId] = useState([])
+
+    const [userClubs, setUserClubs] = useState([])
+
+    const [userRead, setUserRead] = useState([])
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:5000/users/${user.id}')
+        .then(resp => resp.json())
+        .then(data => setUserId(data))
+    }, []);
+
+    console.log(userId)
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:5000/clubs/${user.id}')
+        .then(resp => resp.json())
+        .then(data => setUserClubs(data) )
+    }, []);
+
+    console.log(userClubs)
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:5000/books/${user.id}')
+        .then(resp => resp.json())
+        .then(data => setUserRead(data))
+    }, []);
+
+    console.log(userRead)
+
+
+    
     return (
         <div>
           <div>
@@ -24,6 +58,7 @@ function User() {
                 
                 <div className="user">
                     <h3>About the worm</h3>
+                    
                     <h3>My Clubs</h3>
                     <Bookclub />
                     <h3>Books on my list</h3>
