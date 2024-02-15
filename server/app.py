@@ -67,6 +67,8 @@ def books_by_user(user_id):
     books = BookUser.query.filter(BookUser.user_id == user_id)
     return [b.to_dict(rules=['-user']) for b in books], 200
 
+    books = (db.session.query(Book))
+
 # #should this be by book id, or user.id
 #show a list of books, click on the associated "remove" in order to REMOVE IT
 #same with a list of books, once finished ... "read" option
