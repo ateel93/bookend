@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Login from "../features/Login";
 import SignUp from '../features/Signup';
 import NavBar from '../../NavBar';
@@ -6,8 +6,34 @@ import './Home.css';
 import './Navbar.css'; 
 
 
+
+
 function Home() {
-    const [account, NoAccount] = useState(true)
+
+    const [allUsers, setAllUsers] = useState([])
+    const [allClubs, setAllClubs] = useState([])
+    const [allBooks, setAllBooks] = useState([])
+
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:5000/users') 
+        .then(resp => resp.json())
+        .then(data => setAllUsers(data.users))
+    }, []);
+
+    
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:5000/clubs') 
+        .then(resp => resp.json())
+        .then(data => setAllClubs(data.clubs))
+    }, []);
+
+    console.log(allClubs)
+
+
+
+
 
     return (
         <div>
@@ -27,7 +53,7 @@ function Home() {
             <div className="home">
                 <div>
                     <h3>
-                        We have X amount of users and have hosted X amount of clubs.
+                        We have {allUsers.length} users and have hosted {allClubs.length} book-clubs.
                     </h3>
                 </div>
                 <div>
