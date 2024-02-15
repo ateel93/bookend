@@ -28,12 +28,6 @@ function NavBar() {
                 Signup
                 </NavLink>
                 <NavLink
-                    to="/recommendation"
-                    className="nav-link"
-                >
-                Recommend
-                </NavLink>
-                <NavLink
                     to="/user"
                     className="nav-link"
                 >

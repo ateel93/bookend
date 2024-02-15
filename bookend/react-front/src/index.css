@@ -6,6 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('/public/images/bookwall.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  background-size: cover; /* Adjust the background size for responsiveness */
+  height: 100vh;
+  overflow-x: auto; 
 }
 
 code {
