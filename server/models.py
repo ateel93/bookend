@@ -104,7 +104,7 @@ class ClubUser(db.Model, SerializerMixin):
     club = db.relationship('Club', back_populates = 'clubusers')
     
     # Add serialization rules
-    serialize_rules = ['-users', '-books']
+    serialize_rules = ['-user', '-books', '-club.clubusers']
     
     def __repr__(self):
         return f'<Read {self.id} User Id: {self.user_id} Book Id: {self.book_id}>'
